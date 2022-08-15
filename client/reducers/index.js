@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-// import stuff from './stuff'
+import challenges from './challenges'
 
 export default combineReducers({
-  // stuff
+  challenges
 })
