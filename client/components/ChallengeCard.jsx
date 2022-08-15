@@ -1,9 +1,9 @@
 import React from "react"
 
-function ChallengeCard({challengeData}) {
+function ChallengeCard({data}) {
   return (
     <div>
-      <h3>{challengeData.title}</h3>
+      <h3>{data.title}</h3>
     </div>
   )
 }

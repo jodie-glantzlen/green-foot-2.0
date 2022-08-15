@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <div>
-      {challenges.map(challenge => <ChallengeCard key={challenge.id} challengeData={challenge} />)}
+      {challenges.map(challenge => <ChallengeCard key={challenge.id} data={challenge} />)}
     </div>
   )
 }
