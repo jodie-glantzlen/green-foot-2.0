@@ -8,7 +8,7 @@
     "build": "run-p build:client build:server",
     "build:client": "npm run webpack -- --mode production",
     "build:server": "npm run knex -- migrate:latest",
-    "start": "node server",
+    "start": "nodemon",
     "test": "jest",
     "test:watch": "jest --noStackTrace --watchAll",
     "dev": "run-p dev:client dev:server",
@@ -81,5 +81,8 @@
     "pg": "^8.7.1",
     "superagent": "7.1.1"
   },
-  "browserslist": "> 2%, not dead"
+  "browserslist": "> 2%, not dead",
+  "engines": {
+    "node": "16.x"
+}
 }
