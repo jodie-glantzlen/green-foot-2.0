@@ -14,6 +14,7 @@ function Home() {
 
   return (
     <div>
+      <h1>Hey! Welcome to this sick new version of Green Foot</h1>
       {challenges.map(challenge => <ChallengeCard key={challenge.id} data={challenge} />)}
     </div>
   )

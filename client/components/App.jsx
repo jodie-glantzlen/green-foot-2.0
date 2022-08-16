@@ -1,11 +1,19 @@
 import React from 'react'
 import Home from './Home'
+import Nav from './Nav'
+import Welcome from './Welcome'
+import { Routes, Route } from 'react-router-dom'
+import Tips from './Tips'
 
-function App () {
+function App() {
   return (
     <>
-    <h1>Hey! Welcome to this sick new version of Green Foot</h1>
-    <Home />
+      <Nav />
+      <Routes>
+        <Route path='/' element={<Welcome />}/>
+        <Route path='/home' element={<Home />} />
+        <Route path='/tips' element={<Tips />} />
+      </Routes>
     </>
   )
 }
