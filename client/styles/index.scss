@@ -4,7 +4,42 @@ body {
   left: 0;
   margin: 0;
   padding: 20px;
-  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+// CHALLENGES
 
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-around;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 10px 18px #888888;
+  border-radius: 10%;
+  width: 200px;
+  height: 250px;
+
+  .card-icon {
+    width: 50px;
+  }
+
+  .card-status {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .checkbox {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
