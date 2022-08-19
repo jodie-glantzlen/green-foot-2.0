@@ -13,4 +13,16 @@ router.get('/', (req, res) => {
     .catch((err) => res.status(500).json({ msg: err.message }))
 })
 
+// POST /api/v1/challenges
+
+router.post('/', (req, res) => {
+  const id = req.body
+  console.log('POST from routes: ', id)
+  db.insertChallenge(id)
+    .then((arr) => {
+      res.json(arr)
+    })
+    .catch((err) => res.status(500).json({ msg: err.message }))
+})
+
 module.exports = router

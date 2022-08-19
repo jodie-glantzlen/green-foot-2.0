@@ -5,7 +5,7 @@ export const RECEIVE_CHALLENGES = 'RECEIVE_CHALLENGES'
 
 // ACTION CREATORS
 
-function receiveChallenges(challengesArr) {
+const receiveChallenges = (challengesArr) => {
   return {
     type: 'RECEIVE_CHALLENGES',
     payload: challengesArr
@@ -14,7 +14,7 @@ function receiveChallenges(challengesArr) {
 
 // THUNKS
 
-export function getAllChallenges() {
+export const getAllChallenges = () => {
   return (dispatch) => {
     fetchAllChallenges()
     .then((challengesArr) => {

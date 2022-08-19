@@ -1,9 +1,9 @@
-import { RECEIVE_CHALLENGES } from "../actions/challenges"
+import { SEND_CHALLENGE } from "../actions/completedChallenges"
 
 const reducer = (state = [], action) => {
   switch (action.type) {
-    case RECEIVE_CHALLENGES:
-      return action.payload
+    case SEND_CHALLENGE:
+      return [...state, action.payload]
     default:
       return state
   }
