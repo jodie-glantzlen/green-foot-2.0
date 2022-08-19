@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import ChallengeCard from "./ChallengeCard"
 import { useSelector, useDispatch } from "react-redux"
 import { getAllChallenges } from "../actions/challenges"
+import Rank from "./Rank"
 
 
 function Home() {
@@ -13,11 +14,11 @@ function Home() {
   }, [])
 
   return (
-    <div>
-      <h1>Hey! Welcome to this sick new version of Green Foot</h1>
+    <div className="home-container">
       <div className="card-container">
         {challenges.map(challenge => <ChallengeCard key={challenge.id} data={challenge} />)}
       </div>
+      <Rank />
     </div>
   )
 }
