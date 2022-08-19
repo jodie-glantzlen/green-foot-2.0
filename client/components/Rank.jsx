@@ -1,6 +1,6 @@
 import React from "react"
 
-function Rank({ totalPoints }) {
+const Rank = ({ totalPoints }) => {
   return (
     <div className="rank-container">
       <div className="rank-content">

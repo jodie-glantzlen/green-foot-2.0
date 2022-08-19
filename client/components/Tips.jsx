@@ -1,6 +1,6 @@
 import React from "react"
 
-function Tips () {
+const Tips = () => {
   return (
     <h1>Content coming soooon</h1>
   )

@@ -5,7 +5,7 @@ import Welcome from './Welcome'
 import { Routes, Route } from 'react-router-dom'
 import Tips from './Tips'
 
-function App() {
+const App = () => {
   return (
     <>
       <Nav />

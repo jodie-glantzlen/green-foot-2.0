@@ -5,7 +5,7 @@ import { getAllChallenges } from "../actions/challenges"
 import Rank from "./Rank"
 
 
-function Home() {
+const Home = () => {
   const challenges = useSelector((reduxState) => reduxState.challenges)
   const dispatch = useDispatch()
 
