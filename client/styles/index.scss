@@ -52,6 +52,11 @@ body {
   }
 }
 
+.locked {
+  filter: grayscale(1);
+  background-color: #EEEEEE;
+}
+
 // RANK
 
 .rank-container {

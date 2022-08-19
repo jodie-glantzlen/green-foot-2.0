@@ -13,12 +13,14 @@ function Home() {
     dispatch(getAllChallenges())
   }, [])
 
+  let totalPoints = 0;
+
   return (
     <div className="home-container">
       <div className="card-container">
-        {challenges.map(challenge => <ChallengeCard key={challenge.id} data={challenge} />)}
+        {challenges.map(challenge => <ChallengeCard key={challenge.id} data={challenge} totalPoints={totalPoints} />)}
       </div>
-      <Rank />
+      <Rank totalPoints={totalPoints} />
     </div>
   )
 }
