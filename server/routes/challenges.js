@@ -17,10 +17,14 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const id = req.body
-  console.log('POST from routes: ', id)
   db.insertChallenge(id)
-    .then((arr) => {
-      res.json(arr)
+    .then((idArr) => {
+      const completedChallengeId = idArr[0]
+      return db.selectChallengeById(completedChallengeId)
+    })
+    .then((newChallengeObj) => {
+      console.log('completed challenge obj from POST: ', newChallengeObj)
+      res.json(newChallengeObj)
     })
     .catch((err) => res.status(500).json({ msg: err.message }))
 })

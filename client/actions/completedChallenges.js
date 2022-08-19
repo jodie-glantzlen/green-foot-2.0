@@ -1,4 +1,4 @@
-import { postChallenge } from "../apis/challenges"
+import { postChallenge } from '../apis/challenges'
 
 // TYPE VARS
 export const SEND_CHALLENGE = 'SEND_CHALLENGE'
@@ -7,7 +7,7 @@ export const SEND_CHALLENGE = 'SEND_CHALLENGE'
 const sendChallenge = (challengeId) => {
   return {
     type: 'SEND_CHALLENGE',
-    payload: challengeId
+    payload: challengeId,
   }
 }
 
@@ -15,9 +15,9 @@ const sendChallenge = (challengeId) => {
 export const addChallenge = (challengeId) => {
   return (dispatch) => {
     postChallenge(challengeId)
-    .then((body) => {
-      dispatch(sendChallenge(body))
-    })
-    .catch(err => console.log(err.message))
+      .then((body) => {
+        dispatch(sendChallenge(body.challenge_id))
+      })
+      .catch((err) => console.log(err.message))
   }
 }
