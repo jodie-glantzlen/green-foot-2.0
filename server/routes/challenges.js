@@ -7,7 +7,6 @@ const db = require('../db/functions/challenges')
 router.get('/', (req, res) => {
   db.selectAllChallenges()
     .then((allChallenges) => {
-      //console.log('GET from routes: ', allChallenges)
       res.json(allChallenges)
     })
     .catch((err) => res.status(500).json({ msg: err.message }))
@@ -23,7 +22,6 @@ router.post('/', (req, res) => {
       return db.selectChallengeById(completedChallengeId)
     })
     .then((newChallengeObj) => {
-      console.log('completed challenge obj from POST: ', newChallengeObj)
       res.json(newChallengeObj)
     })
     .catch((err) => res.status(500).json({ msg: err.message }))

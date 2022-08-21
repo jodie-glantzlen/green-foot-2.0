@@ -7,6 +7,8 @@ import Rank from "./Rank"
 
 const Home = () => {
   const challenges = useSelector((reduxState) => reduxState.challenges)
+  const completedChallenges = useSelector((reduxState) => reduxState.completedChallenges)
+
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -14,6 +16,16 @@ const Home = () => {
   }, [])
 
   let totalPoints = 0;
+
+  const addPoints = () => {
+    challenges.map(challenge => {
+      if (completedChallenges.includes(challenge.id)) {
+        totalPoints += challenge.points_rewarded
+      }
+    })
+  }
+
+  addPoints()
 
   return (
     <div className="home-container">
