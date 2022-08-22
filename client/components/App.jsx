@@ -4,6 +4,7 @@ import Nav from './Nav'
 import Welcome from './Welcome'
 import { Routes, Route } from 'react-router-dom'
 import Tips from './Tips'
+import Register from './Register'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path='/' element={<Welcome />}/>
         <Route path='/home' element={<Home />} />
         <Route path='/tips' element={<Tips />} />
+        <Route path='/register' element={<Register />}/>
       </Routes>
     </>
   )
