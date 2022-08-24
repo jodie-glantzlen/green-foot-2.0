@@ -1,4 +1,4 @@
-exports.up = function (knex) {
+exports.up = (knex) => {
   return knex.schema.createTable('completed_challenges', table => {
     table.increments('id')
     table.integer('challenge_id')
@@ -6,6 +6,6 @@ exports.up = function (knex) {
   })
 }
 
-exports.down = function (knex) {
+exports.down = (knex) => {
   return knex.schema.dropTable('completed_challenges')
 }
